@@ -11,13 +11,13 @@ Pod::Spec.new do |s|
   s.author       = { 'Amazon Web Services' => 'amazonwebservices' }
   s.platform     = :ios, '8.0'
 
-  s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
-                     :tag => s.version}
+  s.source       = { :git => 'https://github.com/NYNJA-MC/aws-sdk-ios.git',
+                     :branch => "sqlcipher"}
 
   s.frameworks   = 'CoreGraphics', 'UIKit', 'Foundation', 'SystemConfiguration', 'Security'
-  s.libraries    = 'z', 'sqlite3'
+  s.libraries    = 'z'
   s.requires_arc = true
-
+  s.dependency 'SQLCipher', '4.3.0'
   s.source_files = 'AWSCore/*.{h,m}', 'AWSCore/**/*.{h,m}'
   s.private_header_files = 'AWSCore/XMLWriter/**/*.h', 'AWSCore/FMDB/AWSFMDatabase+Private.h', 'AWSCore/Fabric/*.h', 'AWSCore/Mantle/extobjc/*.h', 'AWSCore/CognitoIdentity/AWSCognitoIdentity+Fabric.h'
 end
